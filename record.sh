@@ -62,7 +62,7 @@ echo "showterm recording. (Exit shell when done.)"
 script $args -q -t"$timingfile" "$scriptfile"
 echo "Uploading..."
 
-if curl --fail "$url" --data-urlencode "cols=$cols" --data-urlencode "lines=$lines" --data-urlencode "scriptfile@$scriptfile" --data-urlencode "timingfile@$timingfile" "secret@$HOME/.showterm"
+if curl --fail "$url" --data-urlencode "cols=$cols" --data-urlencode "lines=$lines" --data-urlencode "scriptfile@$scriptfile" --data-urlencode "timingfile@$timingfile" "secret@$HOME/.showterm" | grep http
 then
     echo ""
     rm "$scriptfile" "$timingfile"
