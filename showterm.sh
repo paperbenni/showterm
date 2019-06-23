@@ -71,5 +71,5 @@ then
     exit 0
 else
     echo "Uploading failed, but don't worry! Your work is safe. You can try uploading again with:"
-    echo curl "$url" --data-urlencode "cols=$cols" --data-urlencode "lines=$lines" --data-urlencode "scriptfile@$scriptfile" --data-urlencode "timingfile@$timingfile" "secret@$HOME/.showterm"
+    echo curl "$url" --data-urlencode "cols=$cols" --data-urlencode "lines=$lines" --data-urlencode "scriptfile@$scriptfile" --data-urlencode "timingfile@$timingfile" "secret@$HOME/.showterm" | grep http
 fi
